@@ -1,0 +1,4 @@
+﻿  网页1.cpp
+C:\Users\ASUS1\source\repos\网页1\网页1\网页1.cpp(10,17): warning C4996: 'getenv': This function or variable may be unsafe. Consider using _dupenv_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\ASUS1\source\repos\网页1\网页1\网页1.cpp(11,14): warning C4996: 'getenv': This function or variable may be unsafe. Consider using _dupenv_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  网页1.vcxproj -> C:\Users\ASUS1\source\repos\网页1\x64\Debug\网页1.exe

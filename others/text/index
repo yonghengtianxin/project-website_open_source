@@ -1,0 +1,7 @@
+<div class="biaoti">首页哦</div>
+<div class="zhengwen">这里是天心的个人网站的首页的说哦~</div>
+<div class="zhengwen">就是首页的意思xxx</div>
+<div class="zhengwen">以后可能会在下面加一些跳转链接什么的</div>
+<button class="button" class="zhengwen" onclick=gotopage("introduce_site") >这里是网站介绍~！戳这里可以看哦</button>
+<br>
+<div class="zhengwen">目前计划部署一些小游戏服务器上去的说</div>

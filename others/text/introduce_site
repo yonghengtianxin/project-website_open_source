@@ -1,0 +1,22 @@
+<div class="biaoti">本站介绍页面~！</div>
+<span>
+<div class="zhengwen">
+&nbsp;&nbsp;这里是，永恒天心的说，欢迎来到天心的个人博客。
+</div>
+<div class="zhengwen">这里可能是世界上最简陋的个人博客之一了（透着一股十几年前的风味）（x）</div>
+<div class="zhengwen">天心可能会在这里挂一些生活和日常，也有可能会写一些文章分享给大家，也许也会写一些小说</div>
+<div class="zhengwen">天心的技术很菜QWQ所以东西也比较菜...</div>
+<div class="zhengwen">如果之后可以的话也许会增加登录系统和评论系统什么的QWQ</div>
+<div class="zhengwen" align=center style="font-size: 20px;">关于本站的部署技术</div>
+<div class="zhengwen">本站是天心自己全手写的代码部署的以后考虑开源</div>
+<div class="zhengwen">虽然我觉得这个阴间技术开源了也没人看，而且也没几行代码</div>
+<div class="zhengwen">目前本站采用c++作为后端配合Ajax+pushstate作为页面切换，然后在url显示上使用了url重写</div>
+<div class="zhengwen">本站正在考虑使用自定的文本格式作为输出格式加快部署速度</div>
+<div class="zhengwen">总之 这个网站至少目前来说又阴间又丑又菜</div>
+<div class="zhengwen">也许某一天会变得好看的说呢，还会又更多的功能（有生之年.jpg）</div>
+<div class="zhengwen">这里是永恒天心 撰写于2022/11/10</div>
+<div class="zhengwen">（就这风格要不是pushstate说是2002年的网站都有人信）</div>
+<br/>
+<div class="zhengwen">还有一点就是本站背景图片主要来源于pixiv，正在考虑把id和作者写上去</div>
+<br/>
+<div class="zhengwen">这里是本站第一个页面哦</div>
