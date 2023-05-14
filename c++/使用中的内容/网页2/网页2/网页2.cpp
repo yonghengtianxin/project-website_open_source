@@ -5,12 +5,14 @@
 #include <locale>
 #include <codecvt>
 #include <vector>
+#include <filesystem>
 using namespace std;
 int main() {
 	int len = atoi(getenv("CONTENT_LENGTH"));
 	char* get = getenv("QUERY_STRING");
 	char* charstr[1000] = { 0 };
-	string str;
+	string img_path = std::filesystem::current_path().string() + "/img";
+	//string str;
 	char* post = new char[len + 1];
 	{
 		int tmp = 0;
@@ -26,7 +28,13 @@ int main() {
 	string background_image_src;
 	vector<string> strvc;
 	srand(time(NULL));
-	ifstream fs(".\\img\\imglist", ios::in);
+	for (const auto& file : std::filesystem::directory_iterator::directory_iterator(img_path)) {
+		if (!file.is_directory())
+		{
+			strvc.push_back(file.path().string().substr(file.path().string().rfind("\\") + 1, file.path().string().length()));
+		}
+	}
+	/*ifstream fs(".\\img\\imglist", ios::in);
 	if (fs)
 	{
 		while (fs.peek() != EOF)
@@ -34,12 +42,12 @@ int main() {
 			getline(fs, str);
 			strvc.push_back(str);
 		}
-	}
-	
+	}*/
 	cout << "Content-type:text/html;\r\n\r\n";
 	cout << "<html lang=zh-CN>\n";
 	cout << "<head>\n";
 	cout << "<meta charset=\"GB18030\">\n";
+	cout << "<meta name=\"viewport\" content=\"initial-scale=1, maximum-scale=1\">\n";
 //	cout << "<meta charset=\"utf-8\">\n";
 	cout << "<meta http-equiv=\"Cache-Control\" content = \"no-cache,no-store,must-revalidate\" / >\n";
 	cout << "<meta http-equiv=\"Pragma\" content=\"no-cache\" / >\n";
@@ -92,6 +100,8 @@ int main() {
 	cout<< "</div>\n";
 
 	cout << "<span id=\"main\">\n";
+	
+
 
 	cout << "<div class=\"biaoti\">基础内容</div>\n";
 	cout << "<div class=\"zhengwen\">\n";
@@ -110,6 +120,11 @@ int main() {
 
 	cout << "</div>\n";
 
+	cout << "<form action = \"./api/comment.exe\" method = \"POST\" enctype=\"GB18030\" class=\"comment\">\n";
+	cout << "<p style=\"padding-right:20px\">这里是评论区哦</p>\n";
+	cout << "<input type=\"text\" name=\"评论\">\n";
+	cout << "<input type=\"submit\" value=\"提交\">\n";
+	cout << "</form>\n";
 
 	cout << "<script src=\"/js/base.js\" defer ></script>\n";
 	cout << "</body>\n";
