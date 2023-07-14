@@ -73,6 +73,10 @@ int main() {
 			cout << "<script>window.history.pushState(\"" + getstr + "\",null,\"" + getstr + "\");document.title=\"" + getstr + "\";</script>\n";
 			cout << "<script>gotobloglist()</script>\n";
 		}
+		else if (getstr == "novellist") {
+			cout << "<script>window.history.pushState(\"" + getstr + "\",null,\"" + getstr + "\");document.title=\"" + getstr + "\";</script>\n";
+			cout << "<script>gotonovellist()</script>\n";
+		}
 		else {
 			cout << "<script>window.history.pushState(\"" + getstr + "\",null,\"blogs/" + getstr + "\");document.title=\"" + getstr + "\";</script>\n";
 			cout << "<script src=\"/js/ajax.js\" defer ></script>\n";
@@ -93,12 +97,13 @@ int main() {
 //	cout << "<div class=nav_left id=index><a>首页</a></div>\n";
 	cout << "<button class=nav_left onclick=gotoindex(\""+ getstr + "\")><a>首页</a></button>\n";
 	cout << "<button class=nav_left onclick=gotobloglist()><a>博客</a></button>\n";
-	cout << "<button class=nav_left><a>小说</a></button>\n";
+	cout << "<button class=nav_left onclick=gotonovellistpage()><a>小说</a></button>\n";
 	cout << "<button class=nav_left onclick=gotogamepage()><a>游戏</a></button>\n";
 	cout << "<button class=nav_right><a>关于天心</a></button>\n";
 
 	cout<< "</div>\n";
 
+	cout << "<div class=\"main\">\n";
 	cout << "<span id=\"main\">\n";
 	
 
@@ -110,15 +115,16 @@ int main() {
 	cout << "</div>\n";
 
 	cout << "</span>\n";
+	cout << "</div>\n";
 
+	cout << "</div>\n";
+	
 	cout << "<div class=\"foot\">\n";
 	cout << "<div>背景图片:" + backgroundimagename + "</div>\n";
 	cout << "<div>联系天心yonghengtianxin@gmail.com</div>\n";
 	cout << "<div>by永恒·天心 2022</div></div>\n";
 
 	cout << "<audio name=\"media\" loop=\"\" controls id=music class=\"music\"> <source src=\"/audio/ZUN - 今宵は飄逸なエゴイスト (Live ver) ~ Egoistic Flowers.mp3\" type=\"audio/mpeg\"></audio>\n";
-
-	cout << "</div>\n";
 
 	cout << "<form action = \"./api/comment.exe\" method = \"POST\" enctype=\"GB18030\" class=\"comment\">\n";
 	cout << "<p style=\"padding-right:20px\">这里是评论区哦</p>\n";

@@ -31,8 +31,10 @@ int main()
 		return 0;
 	}
 
-	ifstream fs(".\\text\\"+getstr);
-	if (fs)
+	ifstream fs((".\\text\\" + getstr));
+	bool flag = 1;
+
+	if (fs && flag)
 	{
 		cout << "Content-type:text/html;charset:utf-8\r\n\r\n";
 		while (fs.peek() != EOF)
